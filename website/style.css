@@ -1,7 +1,7 @@
 @font-face { /*Czcionka podana w pliku */
         font-family: "GediaFont";                   
-        src: url("/fonts/fonts/SuisseIntl-Black-WebM.woff2") format("woff2"),
-        url("/fonts/fonts/SuisseIntl-Black-WebM.woff") format("woff");  
+        src: url("/fonts/SuisseIntl-Black-WebM.woff2") format("woff2"),
+        url("/fonts/SuisseIntl-Black-WebM.woff") format("woff");  
         font-weight: normal;
         font-style: normal;
         font-size: xx-large;
@@ -42,20 +42,7 @@
                 font-weight: bold;
                 color: #0C8382;              
         }
-
-        #test { /* CSS dla sekcji test */
-                background-color: #1F474E;    
-                padding: 15px;
-                border-radius: 8px;
-                display: inline-block;
-                margin-top: 20px;
-        }
-
-        #test h3 { /* CSS dla nagłówka w sekcji test */
-                color: #E88C2C;              
-                margin: 0;
-        }
-
+        /* Responsywność */ 
         @media (max-width: 768px) {
                 .logo {
                         max-width: 180px;
