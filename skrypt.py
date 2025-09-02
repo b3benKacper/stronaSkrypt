@@ -81,7 +81,29 @@ with open(pathJs, "w", encoding="utf-8") as f:
 today = datetime.date.today()
 data = datetime.date.today().strftime("%A, %d %B %Y")
 
-# api z specjalne dni ze zdrowiem, np. dzis jest dzień biegania 
+
+
+# api z specjalne dni ze zdrowiem
+
+day_to_check = int(datetime.date.today().strftime("%d"))
+month_to_check = datetime.date.today().strftime("%B")
+
+with open("events.json", "r", encoding="utf-8") as f:
+    events = json.load(f)
+
+day_events = [e["event"] for e in events.get(month_to_check, []) if e["day"] == day_to_check]
+events_html = ""
+
+if day_events:
+    events_html = "Ważne dni: "
+    print(f"Wydarzenia dla {day_to_check}-{month_to_check}:")
+    for e in day_events:
+        print(f"- {e}")
+        events_html += f"<li>{e}</li>\n"
+else:
+    print(f"Brak wydarzeń dla {day_to_check}-{month_to_check}.")
+
+
 
 
 # imieniny
@@ -106,6 +128,7 @@ with open (pathTemplate, "r", encoding="utf-8") as f:
 
 html = html.replace("{{imieniny}}", imieniny_pl)
 html = html.replace("{{data}}", data)
+html = html.replace("{{important_days}}", events_html)
 pathIndex = Path("website/index.html")
 with open(pathIndex, "w", encoding="utf-8") as f:
     f.write(html)

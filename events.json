@@ -1,0 +1,102 @@
+{
+  "styczeń": [
+    { "day": 26, "event": "Ogólnopolski Dzień Transplantacji" }
+  ],
+  "luty": [
+    { "day": 4, "event": "Międzynarodowy Dzień Walki z Rakiem" },
+    { "day": 11, "event": "Światowy Dzień Chorego" },
+    { "day": 14, "event": "Dzień Chorych na Padaczkę" },
+    { "day": 23, "event": "Ogólnopolski Dzień Walki z Depresją" }
+  ],
+  "marzec": [
+    { "day": 1, "event": "Dzień Otyłości" },
+    { "day": 18, "event": "Europejski Dzień Mózgu" },
+    { "day": 24, "event": "Światowy Dzień Walki z Gruźlicą" }
+  ],
+  "kwiecień": [
+    { "day": 1, "event": "Dzień Trzeźwości" },
+    { "day": 7, "event": "Światowy Dzień Zdrowia" },
+    { "day": 7, "event": "Światowy Dzień Chorego Psychicznie" },
+    { "day": 10, "event": "Dzień Służby Zdrowia (Polska)" },
+    { "day": 11, "event": "Światowy Dzień Osób z Chorobą Parkinsona" },
+    { "day": 15, "event": "Dzień Trzeźwości" },
+    { "day": 17, "event": "Tydzień dla Serca" },
+    { "day": 18, "event": "Tydzień dla Serca" },
+    { "day": 19, "event": "Tydzień dla Serca" },
+    { "day": 20, "event": "Tydzień dla Serca" },
+    { "day": 21, "event": "Tydzień dla Serca" },
+    { "day": 22, "event": "Tydzień dla Serca" },
+    { "day": 23, "event": "Tydzień dla Serca" },
+    { "day": 24, "event": "Tydzień dla Serca" },
+    { "day": 22, "event": "Światowy Dzień Ziemi" }
+  ],
+  "maj": [
+    { "day": 3, "event": "Międzynarodowy Dzień Astmy i Alergii" },
+    { "day": 5, "event": "Europejski Dzień Protestu Przeciwko Dyskryminacji Osób Niepełnosprawnych" },
+    { "day": 6, "event": "Światowy Dzień Astmy" },
+    { "day": 6, "event": "Tydzień PCK" },
+    { "day": 12, "event": "Międzynarodowy Dzień Pielęgniarek i Położnych" },
+    { "day": 12, "event": "Międzynarodowy Dzień Osób Niepełnosprawnych Umysłowo" },
+    { "day": 15, "event": "Międzynarodowy Dzień Rodziny" },
+    { "day": 18, "event": "Światowy Dzień Rodziny" },
+    { "day": 19, "event": "Międzynarodowy Dzień Pamięci Zmarłych na AIDS" },
+    { "day": 26, "event": "Tydzień Promocji Karmienia Piersią" },
+    { "day": 31, "event": "Światowy Dzień bez Tytoniu" }
+  ],
+  "czerwiec": [
+    { "day": 1, "event": "Dzień Dziecka" },
+    { "day": 4, "event": "Międzynarodowy Dzień Przeciwdziałania Agresji Wobec Dzieci" },
+    { "day": 4, "event": "Dni Walki z Rakiem" },
+    { "day": 14, "event": "Światowy Dzień Krwiodawstwa" },
+    { "day": 24, "event": "Światowy Dzień Osteoporozy" },
+    { "day": 26, "event": "Międzynarodowy Dzień Zapobiegania Narkomanii" },
+    { "day": 27, "event": "Światowy Dzień Walki z Cukrzycą" }
+  ],
+  "lipiec": [
+    { "day": 11, "event": "Światowy Dzień Ludności" }
+  ],
+  "sierpień": [
+    { "day": 1, "event": "Światowy Tydzień Karmienia Piersią" },
+    { "day": 27, "event": "Narodowy Dzień Życia" }
+  ],
+  "wrzesień": [
+    { "day": 9, "event": "Światowy Dzień FAS" },
+    { "day": 11, "event": "Międzynarodowy Dzień Udzielania Pierwszej Pomocy" },
+    { "day": 14, "event": "Dzień Chorych na Schizofrenię" },
+    { "day": 15, "event": "Europejski Dzień Prostaty" },
+    { "day": 21, "event": "Światowy Dzień Walki z Chorobą Alzheimera" },
+    { "day": 24, "event": "Światowy Dzień Serca" },
+    { "day": 26, "event": "Dzień Serca" },
+    { "day": 28, "event": "Międzynarodowy Dzień Ludzi Niesłyszących" }
+  ],
+  "październik": [
+    { "day": 1, "event": "Międzynarodowy Dzień Walki z WZW C" },
+    { "day": 1, "event": "Międzynarodowy Dzień Osób Starszych" },
+    { "day": 1, "event": "Międzynarodowy Dzień Pracownika Służby Zdrowia" },
+    { "day": 1, "event": "Światowy Dzień Świadomości o Zapaleniach Wątroby" },
+    { "day": 1, "event": "Międzynarodowy Dzień Lekarza" },
+    { "day": 4, "event": "Światowy Dzień Onkologii" },
+    { "day": 5, "event": "Ogólnopolski Dzień Stomika" },
+    { "day": 10, "event": "Światowy Dzień Zdrowia Psychicznego" },
+    { "day": 15, "event": "Międzynarodowy Dzień Niewidomych" },
+    { "day": 15, "event": "Europejski Dzień Walki z Rakiem Piersi" },
+    { "day": 18, "event": "Światowy Dzień Menopauzy i Andropauzy" },
+    { "day": 18, "event": "Dzień Służby Zdrowia" },
+    { "day": 20, "event": "Światowy Dzień Osteoporozy" },
+    { "day": 24, "event": "Dzień Walki z Otyłością" },
+    { "day": 24, "event": "Europejski Tydzień Bezpieczeństwa i Zdrowia w Pracy" }
+  ],
+  "listopad": [
+    { "day": 13, "event": "Międzynarodowy Dzień Ludzi Niewidomych" },
+    { "day": 14, "event": "Światowy Dzień Zwalczania Cukrzycy" },
+    { "day": 19, "event": "Światowy Dzień POChP" },
+    { "day": 22, "event": "Dni Krwiodawstwa" }
+  ],
+  "grudzień": [
+    { "day": 1, "event": "Światowy Dzień Walki z AIDS" },
+    { "day": 1, "event": "Dni Walki z Gruźlicą i Chorobami Płuc" },
+    { "day": 3, "event": "Światowy Dzień Osób Niepełnosprawnych" },
+    { "day": 5, "event": "Międzynarodowy Dzień Wolontariusza" },
+    { "day": 10, "event": "Międzynarodowy Dzień Praw Człowieka" }
+  ]
+}

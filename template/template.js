@@ -1,5 +1,5 @@
 const weatherData = {{data}};
-const test = document.getElementById("test");
+const pogoda = document.getElementById("pogoda");
 const godzina = document.getElementById("godzina");
 
 function updateTime() {
@@ -13,17 +13,16 @@ godzina.innerHTML ="Godzina: " + hours + ":" + minutes;
 }
 
 function updateWeather() {
-// pogoda z api
+// pogoda z skryptu z api
 const now = new Date();
-const currentHour = now.getHours();
 
 const currentTimeStr = now.toISOString().slice(0, 13) + ":00";
 const currentWeather = weatherData.find(w => w.time.startsWith(currentTimeStr));
 
 if (currentWeather) {
-    test.innerHTML = `<h3>Pogoda: ${currentWeather.temperature} °C ${currentWeather.icon} </h3>`;
+    pogoda.innerHTML = `<h3>Pogoda: ${currentWeather.temperature} °C ${currentWeather.icon} </h3>`;
 } else {
-    test.innerHTML = "<h3>Brak danych dla bieżącej godziny</h3>";
+    pogoda.innerHTML = "<h3>Brak danych dla bieżącej godziny</h3>";
 }
 }
 
