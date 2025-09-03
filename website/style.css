@@ -20,7 +20,6 @@
         height: auto;
         margin: 100px auto 40px auto;
         filter: drop-shadow(0 0 20px rgba(232, 140, 44, 0.3));
-        animation: logoFloat 6s ease-in-out infinite;
         }
 
         h1 { /* CSS dla nagłówka */

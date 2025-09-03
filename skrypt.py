@@ -145,7 +145,19 @@ with open (pathTemplate, "r", encoding="utf-8") as f:
 
 html = html.replace("{{imieniny}}", imieniny_pl)
 html = html.replace("{{data}}", data)
+<<<<<<< Updated upstream
 html = html.replace("{{important_days}}", events_html_class)
+=======
+
+# Jeśli nie ma ważnych dni, usuń kontener z HTML
+if not day_events:
+    # Usuwamy cały <div id="important_days">...</div>
+    import re
+    html = re.sub(r'<div id="important_days">.*?</div>', '', html, flags=re.DOTALL)
+else:
+    html = html.replace("{{important_days}}", events_html)
+
+>>>>>>> Stashed changes
 pathIndex = Path("website/index.html")
 with open(pathIndex, "w", encoding="utf-8") as f:
     f.write(html)
