@@ -109,16 +109,17 @@ with open("events.json", "r", encoding="utf-8") as f:
 
 day_events = [e["event"] for e in events.get(month_to_check, []) if e["day"] == day_to_check]
 events_html = ""
-
+events_html_class = ""
 if day_events:
     events_html = "Ważne dni: "
     print(f"Wydarzenia dla {day_to_check}-{months_genitive[datetime.date.today().strftime("%B")]}:")
     for e in day_events:
         print(f"- {e}")
         events_html += f"<li>{e}</li>\n"
+    events_html_class = f'<div id="important_days">{events_html}</div>'
 else:
     print(f"Brak wydarzeń dla {day_to_check}-{month_to_check}.")
-
+    # events_html_class = f'<div>{important_days}</div>'
 
 
 
@@ -144,7 +145,7 @@ with open (pathTemplate, "r", encoding="utf-8") as f:
 
 html = html.replace("{{imieniny}}", imieniny_pl)
 html = html.replace("{{data}}", data)
-html = html.replace("{{important_days}}", events_html)
+html = html.replace("{{important_days}}", events_html_class)
 pathIndex = Path("website/index.html")
 with open(pathIndex, "w", encoding="utf-8") as f:
     f.write(html)
