@@ -12,7 +12,24 @@ locale.setlocale(locale.LC_TIME, "Polish_Poland")
 # mac / linux
 # locale.setlocale(locale.LC_TIME, "pl_PL.UTF-8") 
 
+# data
+months_genitive = {
+    "styczeń": "stycznia",
+    "luty": "lutego",
+    "marzec": "marca",
+    "kwiecień": "kwietnia",
+    "maj": "maja",
+    "czerwiec": "czerwca",
+    "lipiec": "lipca",
+    "sierpień": "sierpnia",
+    "wrzesień": "września",
+    "październik": "października",
+    "listopad": "listopada",
+    "grudzień": "grudnia"
+}
 
+today = datetime.date.today()
+data = datetime.date.today().strftime(f"%A, %d {months_genitive[datetime.date.today().strftime("%B")]} %Y")
 # pogoda
 
 weatherMap = {
@@ -46,7 +63,10 @@ weatherMap = {
     99: { "description": "Burza z silnym gradem", "icon": "⛈️❄️" }
 }
 
-url = "https://api.open-meteo.com/v1/forecast?latitude=51.8033&longitude=15.717&hourly=temperature_2m,weather_code"
+
+
+url = f"https://api.open-meteo.com/v1/forecast?latitude=51.8033&longitude=15.717&hourly=temperature_2m,weather_code&start_date={today}&end_date={today}"
+
 dataOfWeather = requests.get(url).json()
 
 hours = dataOfWeather["hourly"]["time"]
@@ -77,10 +97,6 @@ with open(pathJs, "w", encoding="utf-8") as f:
     f.write(js_content)
 
 
-# data
-today = datetime.date.today()
-data = datetime.date.today().strftime("%A, %d %B %Y")
-
 
 
 # api z specjalne dni ze zdrowiem
@@ -96,7 +112,7 @@ events_html = ""
 
 if day_events:
     events_html = "Ważne dni: "
-    print(f"Wydarzenia dla {day_to_check}-{month_to_check}:")
+    print(f"Wydarzenia dla {day_to_check}-{months_genitive[datetime.date.today().strftime("%B")]}:")
     for e in day_events:
         print(f"- {e}")
         events_html += f"<li>{e}</li>\n"

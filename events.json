@@ -60,6 +60,8 @@
     { "day": 27, "event": "Narodowy Dzień Życia" }
   ],
   "wrzesień": [
+    { "day": 3, "event": "test" },
+    { "day": 3, "event": "test2" },
     { "day": 9, "event": "Światowy Dzień FAS" },
     { "day": 11, "event": "Międzynarodowy Dzień Udzielania Pierwszej Pomocy" },
     { "day": 14, "event": "Dzień Chorych na Schizofrenię" },
