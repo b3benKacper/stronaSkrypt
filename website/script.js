@@ -11,7 +11,15 @@ if (minutes < 10) minutes = "0" + minutes;
 godzina.innerHTML = hours + ":" + minutes;
 
 }
+const importantDays = document.getElementById("important_days");
+let specialDay = ""; // tutaj wpisz swój mechanizm pobierania dnia specjalnego
 
+if (!specialDay) {
+    importantDays.style.display = "none";
+} else {
+    importantDays.style.display = "block";
+    importantDays.innerHTML = specialDay;
+}
 function updateWeather() {
 // pogoda z skryptu z api
 const now = new Date();
