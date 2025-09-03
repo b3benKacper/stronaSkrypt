@@ -13,16 +13,14 @@
                 max-width: 1200px;
                 margin: 0 auto;
         }
-
-        .logo { /* CSS dla logo  */
-                position: fixed;
-                top: 24px;
-                right: 24px;
-                display: block;
-                max-width: 500px;
-                width: 100%;
-                height: auto;
-                margin: 0 auto 30px auto;
+        .logo {
+        display: block;
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+        margin: 100px auto 40px auto;
+        filter: drop-shadow(0 0 20px rgba(232, 140, 44, 0.3));
+        animation: logoFloat 6s ease-in-out infinite;
         }
 
         h1 { /* CSS dla nagłówka */
@@ -103,51 +101,101 @@
 
 
 
-        /* Responsywność */ 
+        @media (max-width: 1024px) {
+        #godzina {
+                top: 20px;
+                left: 20px;
+                padding: 14px 24px;
+                font-size: 22px;
+        }
+        
+        .logo {
+                max-width: 350px;
+                margin: 80px auto 30px auto;
+        }
+        
+        h1 {
+                font-size: 1.8rem;
+                padding: 16px 30px;
+                margin: 20px;
+        }
+        }
+
         @media (max-width: 768px) {
-                .logo {
-                        max-width: 300px;
-                }
-                
-                body {
-                        padding: 15px;
-                }
+        #godzina {
+                top: 16px;
+                left: 16px;
+                padding: 12px 20px;
+                font-size: 20px;
+                border-radius: 16px;
+        }
 
-                .imieniny-container,
-                #pogoda,
-                #important_days,
-                #godzina {
-                        padding: 15px;
-                        margin: 10px 0;
-                }
+        .logo {
+                max-width: 280px;
+                margin: 70px auto 25px auto;
+        }
 
-                #godzina {
-                        font-size: 20px;
-                }
+        h1 {
+                font-size: 1.5rem;
+                padding: 16px 20px;
+                margin: 15px;
+        }
+
+        p.imieniny, #pogoda, #important_days {
+                margin: 20px 15px;
+                padding: 25px 20px;
+                border-radius: 16px;
+        }
+
+        p.imieniny {
+                font-size: 1.1rem;
+        }
+
+        #pogoda h3 {
+                font-size: 1.5rem;
+        }
+
+        #important_days {
+                font-size: 1.1rem;
+        }
         }
 
         @media (max-width: 480px) {
-                .logo {
-                        max-width: 200px;
-                }
-                
-                h1 {
-                        font-size: 24px;
-                }
-                
-                p {
-                        font-size: 16px;
-                }
+        #godzina {
+                top: 12px;
+                left: 12px;
+                padding: 10px 16px;
+                font-size: 18px;
+                border-radius: 12px;
+        }
 
-                .imieniny-container,
-                #pogoda,
-                #important_days,
-                #godzina {
-                        padding: 12px;
-                        border-radius: 10px;
-                }
+        .logo {
+                max-width: 220px;
+                margin: 60px auto 20px auto;
+        }
 
-                #godzina {
-                        font-size: 18px;
-                }
+        h1 {
+                font-size: 1.3rem;
+                padding: 14px 16px;
+                margin: 12px;
+        }
+
+        p.imieniny, #pogoda, #important_days {
+                margin: 15px 10px;
+                padding: 20px 16px;
+                border-radius: 14px;
+        }
+
+        p.imieniny {
+                font-size: 1rem;
+        }
+
+        #pogoda h3 {
+                font-size: 1.3rem;
+        }
+
+        #important_days {
+                font-size: 1rem;
+                min-height: 80px;
+        }
         }
