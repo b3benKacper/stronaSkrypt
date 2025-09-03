@@ -4,13 +4,13 @@ import requests
 from pathlib import Path
 import json
 import re
+import platform
 
 # zmiana miesiąca na polski tekst (translacja)
-# windows
-locale.setlocale(locale.LC_TIME, "Polish_Poland")
-
-# mac / linux
-# locale.setlocale(locale.LC_TIME, "pl_PL.UTF-8") 
+if platform.system() == "Windows":
+    locale.setlocale(locale.LC_TIME, "Polish_Poland")
+else:
+    locale.setlocale(locale.LC_TIME, "pl_PL.UTF-8")
 
 # data
 months_genitive = {
@@ -96,9 +96,6 @@ js_content = js_content.replace("{{data}}", weather_json)
 with open(pathJs, "w", encoding="utf-8") as f:
     f.write(js_content)
 
-
-
-
 # api z specjalne dni ze zdrowiem
 
 day_to_check = int(datetime.date.today().strftime("%d"))
@@ -119,8 +116,6 @@ if day_events:
     events_html_class = f'<div id="important_days">{events_html}</div>'
 else:
     print(f"Brak wydarzeń dla {day_to_check}-{month_to_check}.")
-    # events_html_class = f'<div>{important_days}</div>'
-
 
 
 # imieniny
@@ -132,9 +127,6 @@ response = requests.get(url)
 dataName = response.json()
 imieniny_pl = dataName["data"]["pl"]
 
-
-
-
 print(imieniny_pl)
 print(today)
 
@@ -145,21 +137,7 @@ with open (pathTemplate, "r", encoding="utf-8") as f:
 
 html = html.replace("{{imieniny}}", imieniny_pl)
 html = html.replace("{{data}}", data)
-<<<<<<< Updated upstream
 html = html.replace("{{important_days}}", events_html_class)
-=======
-
-# Jeśli nie ma ważnych dni, usuń kontener z HTML
-if not day_events:
-    # Usuwamy cały <div id="important_days">...</div>
-    import re
-    html = re.sub(r'<div id="important_days">.*?</div>', '', html, flags=re.DOTALL)
-else:
-    html = html.replace("{{important_days}}", events_html)
-
->>>>>>> Stashed changes
 pathIndex = Path("website/index.html")
 with open(pathIndex, "w", encoding="utf-8") as f:
     f.write(html)
-
-    
