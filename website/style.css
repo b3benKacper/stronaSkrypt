@@ -9,64 +9,64 @@
                 color: #0C8382;              
                 font-family: "GediaFont";
                 margin: 0;
-                padding: 20px;
-                max-width: 1200px;
-                margin: 0 auto;
+                padding: 2vh 2vw;
+                width: 100vw;
+                height: 100vh;
+                box-sizing: border-box;
+                overflow-x: hidden;
         }
         .logo {
         display: block;
-        max-width: 600px;
-        width: 100%;
+        max-width: 20vw;
+        width: 20vw;
         height: auto;
-        margin: 100px auto 40px auto;
+        margin: 8vh auto 4vh auto;
         filter: drop-shadow(0 0 20px rgba(232, 140, 44, 0.3));
         }
 
         h1 { /* CSS dla nagłówka */
                 color: #1a2a2e;             
                 border-bottom: 3px solid #E88C2C;
-                padding-bottom: 10px;
+                padding-bottom: 1vh;
                 text-align: center;
-                font-size: 40px;
+                font-size: 3.2vw;
+                margin: 1vh 2vw;
         }
 
         p.imieniny {
                 background: #1a2a2e;
-                border-radius: 12px;
-                padding: 80px;
-                margin: 15px 0;
+                border-radius: 1.2vw;
+                padding: 4vh 4vw;
+                margin: 2vh 2vw;
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
                 border: 2px solid #0C8382;
                 text-align: center;
-                font-size: 40px;
+                font-size: 2.8vw;
                 color: #AEC7C3;
-                text-align: center;
         }
 
         #important_days {
                 background: #1a2a2e;
-                border-radius: 12px;
-                padding: 80px;
-                margin: 15px 0;
+                border-radius: 1.2vw;
+                padding: 3vh 3vw;
+                margin: 1.5vh 1.5vw;
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
                 border: 2px solid #0C8382;
                 text-align: center;
-                font-size: 40px;
-                margin: 0;
+                font-size: 2.8vw;
                 color: #AEC7C3;
-                text-align: center;
         }
         /* Kontener dla godziny */
         #godzina {
         position: fixed;
-        top: 24px;
-        left: 24px;
+        top: 2vh;
+        left: 2vw;
         background: rgba(5, 18, 20, 0.95);
         backdrop-filter: blur(15px);
         border: 2px solid #0C8382;
-        border-radius: 20px;
-        padding: 32px 46px;
-        font-size: 48px;
+        border-radius: 1.5vw;
+        padding: 2vh 3vw;
+        font-size: 3.5vw;
         color: #E88C2C;
         text-shadow: 0 0 15px rgba(232, 140, 44, 0.4);
         box-shadow: 
@@ -82,18 +82,17 @@
         /* Kontener dla pogody */
         #pogoda {
                 background: #1a2a2e;
-                border-radius: 12px;
-                padding: 80px;
-                margin: 15px 0;
+                border-radius: 1.2vw;
+                padding: 2vh 2vw;
+                margin: 2vh 2vw;
                 box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
                 border: 2px solid #0C8382;
                 text-align: center;
-                font-size: 40px;
-
+                font-size: 2.8vw;
         }
         #pogoda h3 {
                 margin: 0;
-                font-size: 40px;
+                font-size: 2.8vw;
                 color: #AEC7C3;
                 text-align: center;
         }
@@ -102,99 +101,74 @@
 
         @media (max-width: 1024px) {
         #godzina {
-                top: 20px;
-                left: 20px;
-                padding: 14px 24px;
-                font-size: 22px;
+                font-size: 3vw;
+                padding: 2.5vh 3.5vw;
         }
         
         .logo {
-                max-width: 350px;
-                margin: 80px auto 30px auto;
+                max-width: 35vw;
+                width: 35vw;
         }
         
         h1 {
-                font-size: 1.8rem;
-                padding: 16px 30px;
-                margin: 20px;
+                font-size: 3.5vw;
         }
         }
 
         @media (max-width: 768px) {
         #godzina {
-                top: 16px;
-                left: 16px;
-                padding: 12px 20px;
-                font-size: 20px;
-                border-radius: 16px;
+                font-size: 3.5vw;
+                padding: 2vh 3vw;
+                border-radius: 2vw;
         }
 
         .logo {
-                max-width: 280px;
-                margin: 70px auto 25px auto;
+                max-width: 50vw;
+                width: 50vw;
         }
 
         h1 {
-                font-size: 1.5rem;
-                padding: 16px 20px;
-                margin: 15px;
+                font-size: 4vw;
+                margin: 1vh 3vw;
         }
 
         p.imieniny, #pogoda, #important_days {
-                margin: 20px 15px;
-                padding: 25px 20px;
-                border-radius: 16px;
-        }
-
-        p.imieniny {
-                font-size: 1.1rem;
+                font-size: 3.8vw;
+                padding: 3vh 4vw;
+                margin: 2vh 3vw;
+                border-radius: 2vw;
         }
 
         #pogoda h3 {
-                font-size: 1.5rem;
-        }
-
-        #important_days {
-                font-size: 1.1rem;
+                font-size: 3.8vw;
         }
         }
 
         @media (max-width: 480px) {
         #godzina {
-                top: 12px;
-                left: 12px;
-                padding: 10px 16px;
-                font-size: 18px;
-                border-radius: 12px;
+                font-size: 4.5vw;
+                padding: 1.5vh 2.5vw;
+                border-radius: 2.5vw;
         }
 
         .logo {
-                max-width: 220px;
-                margin: 60px auto 20px auto;
+                max-width: 60vw;
+                width: 60vw;
         }
 
         h1 {
-                font-size: 1.3rem;
-                padding: 14px 16px;
-                margin: 12px;
+                font-size: 5vw;
+                margin: 1vh 4vw;
         }
 
         p.imieniny, #pogoda, #important_days {
-                margin: 15px 10px;
-                padding: 20px 16px;
-                border-radius: 14px;
-        }
-
-        p.imieniny {
-                font-size: 1rem;
+                font-size: 4.5vw;
+                padding: 3vh 3vw;
+                margin: 2vh 4vw;
+                border-radius: 2.5vw;
         }
 
         #pogoda h3 {
-                font-size: 1.3rem;
-        }
-
-        #important_days {
-                font-size: 1rem;
-                min-height: 80px;
+                font-size: 4.5vw;
         }
         }
