@@ -29,6 +29,7 @@ months_genitive = {
 }
 
 today = datetime.date.today()
+tomorrow = today + datetime.timedelta(days=1)
 data = datetime.date.today().strftime(f"%A, %d {months_genitive[datetime.date.today().strftime("%B")]} %Y")
 # pogoda
 
@@ -65,7 +66,7 @@ weatherMap = {
 
 
 
-url = f"https://api.open-meteo.com/v1/forecast?latitude=51.8033&longitude=15.717&hourly=temperature_2m,weather_code&start_date={today}&end_date={today}"
+url = f"https://api.open-meteo.com/v1/forecast?latitude=51.8033&longitude=15.717&hourly=temperature_2m,weather_code&start_date={today}&end_date={tomorrow}"
 
 dataOfWeather = requests.get(url).json()
 
