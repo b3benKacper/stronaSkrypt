@@ -3,27 +3,32 @@ const pogoda = document.getElementById("pogoda");
 const godzina = document.getElementById("godzina");
 
 function updateTime() {
-let hours = new Date().getHours();
-let minutes = new Date().getMinutes();
-if (hours < 10) hours = "0" + hours;
-if (minutes < 10) minutes = "0" + minutes;
+    let hours = new Date().getHours();
+    let minutes = new Date().getMinutes();
+    if (hours < 10) hours = "0" + hours;
+    if (minutes < 10) minutes = "0" + minutes;
 
-godzina.innerHTML =hours + ":" + minutes;
+    godzina.innerHTML =hours + ":" + minutes;
 
 }
 
 function updateWeather() {
 // pogoda z skryptu z api
-const now = new Date();
+    const now = new Date();
 
-const currentTimeStr = now.toISOString().slice(0, 13) + ":00";
-const currentWeather = weatherData.find(w => w.time.startsWith(currentTimeStr));
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+    const hour = String(now.getHours()).padStart(2, "0");
 
-if (currentWeather) {
-    pogoda.innerHTML = `<h3>Pogoda: ${currentWeather.temperature} °C ${currentWeather.icon} </h3>`;
-} else {
-    pogoda.innerHTML = "<h3>Brak danych dla bieżącej godziny</h3>";
-}
+    const currentTimeStr = `${year}-${month}-${day}T${hour}:00`;
+    const currentWeather = weatherData.find(w => w.time.startsWith(currentTimeStr));
+
+    if (currentWeather) {
+        pogoda.innerHTML = `<h3>Pogoda: ${currentWeather.temperature} °C ${currentWeather.icon} </h3>`;
+    } else {
+        pogoda.innerHTML = "<h3>Brak danych dla bieżącej godziny</h3>";
+    }
 }
 
 updateTime();
